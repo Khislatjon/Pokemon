@@ -19,6 +19,7 @@
 		0E3122F52C41209B001B3464 /* PokemonCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3122F42C41209B001B3464 /* PokemonCellView.swift */; };
 		0E6B91DC2C414C3900A78C99 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0E6B91DB2C414C3900A78C99 /* Kingfisher */; };
 		0E6B91DE2C41531100A78C99 /* NetworkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6B91DD2C41531100A78C99 /* NetworkState.swift */; };
+		0E6B91E02C42303100A78C99 /* PokemonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6B91DF2C42303100A78C99 /* PokemonDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		0E3122F02C40FEB9001B3464 /* PokemonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailView.swift; sourceTree = "<group>"; };
 		0E3122F42C41209B001B3464 /* PokemonCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCellView.swift; sourceTree = "<group>"; };
 		0E6B91DD2C41531100A78C99 /* NetworkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkState.swift; sourceTree = "<group>"; };
+		0E6B91DF2C42303100A78C99 /* PokemonDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				0E3122E62C40F668001B3464 /* PokemonListViewModel.swift */,
+				0E6B91DF2C42303100A78C99 /* PokemonDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				0E3122F52C41209B001B3464 /* PokemonCellView.swift in Sources */,
 				0E3122E92C40F67A001B3464 /* PokemonListView.swift in Sources */,
 				0E3122E42C40F188001B3464 /* PokemonNetworkService.swift in Sources */,
+				0E6B91E02C42303100A78C99 /* PokemonDetailViewModel.swift in Sources */,
 				0E3122E72C40F668001B3464 /* PokemonListViewModel.swift in Sources */,
 				0E3122D52C40D9E0001B3464 /* PokemonApp.swift in Sources */,
 				0E3122EF2C40FDFA001B3464 /* PokemonDetail.swift in Sources */,

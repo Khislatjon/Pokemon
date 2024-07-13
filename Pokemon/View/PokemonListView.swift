@@ -30,7 +30,9 @@ struct PokemonListView: View {
             }
             .navigationTitle("Pokemons")
             .navigationDestination(for: Pokemon.self) { pokemon in
-                PokemonDetailView(pokemonDetail: viewModel.pokemonDetails[pokemon.url])
+                if let detail = viewModel.pokemonDetails[pokemon.url] {
+                    PokemonDetailView(viewModel: PokemonDetailViewModel(detail: detail))
+                }
             }
         }
     }
