@@ -18,10 +18,12 @@ struct PokemonListView: View {
                     NavigationLink(value: pokemon) {
                         PokemonCellView(viewModel: viewModel, pokemon: pokemon)
                     }
-                }
-                
-                if let _ = viewModel.pokemonList.next, searchText.isEmpty {
-                    lastRowView
+                    
+                    if pokemon == viewModel.pokemonList.results.last, searchText.isEmpty {
+                        lastRowView.onAppear {
+                            viewModel.getPokemonList()
+                        }
+                    }
                 }
             }
             .searchable(text: $searchText, prompt: "Search Pokemons")
@@ -52,9 +54,6 @@ struct PokemonListView: View {
             case let .error(description):
                 Text(description).foregroundColor(.red)
             }
-        }
-        .onAppear {
-            viewModel.getPokemonList()
         }
     }
 }
