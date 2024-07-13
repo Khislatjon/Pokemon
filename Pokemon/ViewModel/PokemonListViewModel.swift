@@ -34,7 +34,7 @@ class PokemonListViewModel: ObservableObject {
             .sink { (completion) in
                 switch completion {
                 case .finished:
-                    print("Finished")
+                    print("Finished loading")
                 case let .failure(error):
                     print("Error", error.localizedDescription)
                     self.state = .error(description: error.localizedDescription)

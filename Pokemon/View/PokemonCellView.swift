@@ -23,6 +23,10 @@ struct PokemonCellView: View {
                 .frame(width: 60, height: 60)
                 .clipShape(RoundedRectangle(cornerRadius: 8))
             Text(pokemon.name.capitalized).font(.headline)
-        }.frame(height: 64)
+        }
+        .accessibilityElement(children: .combine)
+        .accessibilityAddTraits(.isButton)
+        .accessibilityLabel("\(pokemon.name). Image of \(pokemon.name).")
+        .accessibilityHint("Double tap to open Pokemon stats.")
     }
 }

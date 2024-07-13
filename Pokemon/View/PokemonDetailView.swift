@@ -20,8 +20,10 @@ struct PokemonDetailView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: .infinity)
-                .frame(height: UIScreen.main.bounds.size.width)
+                .frame(height: UIScreen.main.bounds.size.height * 0.4)
                 .background(Color.green)
+                .accessibilityAddTraits(.isImage)
+                .accessibilityLabel("Image of \(viewModel.detail.name)")
             
             VStack(alignment: .leading) {
                 Text("**Height:** \(viewModel.detail.height)")
