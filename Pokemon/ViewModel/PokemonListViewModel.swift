@@ -16,6 +16,9 @@ class PokemonListViewModel: ObservableObject {
     @Published var state: NetworkState = .loaded
     @Published var pokemonDetails: [String: PokemonDetail] = [:]
     
+    
+    /// Sends a request using Combine to fetch a list of Pokemons.
+    /// Once data is received, maps urls and calls 'fetchPokemonDetails' function.
     func getPokemonList() {
         guard self.state != .idle, let request = service.getRequest(pokemonList.next) else { return }
         self.state = .isLoading
@@ -55,6 +58,9 @@ class PokemonListViewModel: ObservableObject {
             .store(in: &cancellables)
     }
     
+    /// Fetches Pokemon details using Task group and async/await.
+    /// - Parameter urls: list of urls to request.
+    /// - Returns: A dictionary, where each key is a unique url called and value is a corresponding PokemonDetail model.
     private func fetchPokemonDetails(urls: [String]) async throws -> [String: PokemonDetail] {
         var result: [String: PokemonDetail] = [:]
         try await withThrowingTaskGroup(of: [String: PokemonDetail].self) { group in
